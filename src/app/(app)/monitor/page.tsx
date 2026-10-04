@@ -123,7 +123,7 @@ export default function MonitorPage() {
               </div>
               <div className="mono mt-0.5 truncate text-xs text-muted">{c.snippet}</div>
               <div className="text-xs text-muted">
-                {new Date(c.at).toLocaleString()} · {c.intent} · {c.durationSec}s · <span className="mono">{c.id}</span>
+                {c.at.slice(0, 16).replace("T", " ")} UTC · {c.intent} · {c.durationSec}s · <span className="mono">{c.id}</span>
               </div>
             </div>
             {promoted.includes(c.id) ? (
